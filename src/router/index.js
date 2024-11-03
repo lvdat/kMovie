@@ -8,6 +8,11 @@ const router = createRouter({
             name: 'home',
             component: () => import('../views/Home.vue'),
         },
+        {
+            path: '/tim-phim/:key',
+            name: 'search',
+            component: () => import('../views/Search.vue'),
+        },
     ],
 })
 

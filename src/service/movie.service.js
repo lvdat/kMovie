@@ -8,7 +8,7 @@ class MovieService {
         return api().get(`/phim/${slug}`)
     }
     searchMovie(key, limit = 10) {
-        return api().get(`v1/api/tim-kiem?keyword=${key}&limit=${limit}`)
+        return api().get(`/v1/api/tim-kiem?keyword=${key}&limit=${limit}`)
     }
 }
 

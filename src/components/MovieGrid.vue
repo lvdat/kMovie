@@ -15,14 +15,17 @@
                     class="movie-card"
                     @click="this.$router.push('/phim/' + item.slug)"
                 >
-                    <img :src="item.thumb_url" :alt="item.name" />
+                    <img
+                        :src="resolveThumbURL(item.thumb_url)"
+                        :alt="item.name"
+                    />
                     <div class="movie-card-info">
                         {{ item.name }}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" v-else>DANG TAI DU LIEU</div>
+        <div class="row" v-else>KHONG CO DU LIEU</div>
     </div>
 </template>
 <script>
@@ -30,6 +33,13 @@ export default {
     props: {
         movies: {
             type: Object,
+        },
+    },
+    methods: {
+        resolveThumbURL(path) {
+            return path.includes('http://') || path.includes('https')
+                ? path
+                : 'https://phimimg.com/' + path
         },
     },
 }

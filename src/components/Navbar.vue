@@ -58,21 +58,42 @@
                         >
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex" role="search" @submit.prevent="onSearch">
                     <input
                         class="form-control me-2"
                         type="search"
                         placeholder="Search"
                         aria-label="Search"
+                        v-model="searchQuery"
+                        minlength="3"
                     />
                     <button class="btn btn-outline-success" type="submit">
-                        Search
+                        Tim
                     </button>
                 </form>
             </div>
         </div>
     </nav>
 </template>
+<script>
+export default {
+    data: () => ({
+        searchQuery: '',
+    }),
+    methods: {
+        onSearch() {
+            if (this.searchQuery) {
+                this.$router.push({
+                    name: 'search',
+                    params: {
+                        key: this.searchQuery,
+                    },
+                })
+            }
+        },
+    },
+}
+</script>
 <style scoped>
 .nav-item {
     margin-right: 5px;
