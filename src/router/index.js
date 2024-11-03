@@ -13,6 +13,11 @@ const router = createRouter({
             name: 'search',
             component: () => import('../views/Search.vue'),
         },
+        {
+            path: '/phim/:slug',
+            name: 'movie-info',
+            component: () => import('../views/MovieDetail.vue'),
+        },
     ],
 })
 
