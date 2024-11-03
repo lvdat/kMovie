@@ -1,7 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top main__navbar"
+    >
         <div class="container">
-            <a class="navbar-brand" href="#">kMovie</a>
+            <router-link class="navbar-brand" to="/"><b>kMovie</b></router-link>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -16,12 +18,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                            >Home</a
+                        <router-link
+                            class="nav-link active"
+                            aria-current="page"
+                            to="/"
+                            >PHIM MOI</router-link
                         >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PHIM MOI</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
@@ -71,3 +73,18 @@
         </div>
     </nav>
 </template>
+<style scoped>
+.nav-item {
+    margin-right: 5px;
+}
+a.nav-link.active:hover {
+    color: rgb(0, 255, 133);
+}
+.navbar-brand {
+    color: rgb(0, 255, 133) !important;
+}
+.main__navbar {
+    color: rgb(232, 231, 228);
+    background-color: #000;
+}
+</style>
