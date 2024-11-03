@@ -18,6 +18,11 @@ const router = createRouter({
             name: 'movie-info',
             component: () => import('../views/MovieDetail.vue'),
         },
+        {
+            path: '/phim/:slug/:play',
+            name: 'movie-play',
+            component: () => import('../views/MoviePlay.vue'),
+        },
     ],
 })
 
