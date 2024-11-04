@@ -1,4 +1,5 @@
 <template>
+    <Loading v-show="loading" />
     <div class="row">
         <div class="col-md-8" v-if="movie">
             <div class="movie-info pb-1">
@@ -64,8 +65,10 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card" style="border-radius: 0%">
-                <div class="card-header">Danh sach tap phim</div>
+            <div class="card border-primary" style="border-radius: 0%">
+                <div class="card-header bg-primary text-white">
+                    Danh sach tap phim
+                </div>
                 <div class="card-body">
                     <router-link
                         class="btn btn-primary m-1"
@@ -82,20 +85,27 @@
 </template>
 <script>
 import movieService from '../service/movie.service'
+import Loading from '../components/Loading.vue'
 import { useRoute } from 'vue-router'
 
 export default {
+    components: {
+        Loading,
+    },
     data: () => ({
         movie: null,
+        loading: true,
     }),
     methods: {
         fetchMovieData() {
+            this.loading = true
             this.movie = {}
             const route = useRoute()
             const slug = route.params.slug
             movieService.getMovie(slug).then(res => {
                 console.log(res.data)
                 this.movie = res.data
+                this.loading = false
             })
         },
     },

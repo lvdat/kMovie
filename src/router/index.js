@@ -22,8 +22,12 @@ const router = createRouter({
             path: '/phim/:slug/:play',
             name: 'movie-play',
             component: () => import('../views/MoviePlay.vue'),
+            props: true,
         },
     ],
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0, behavior: 'smooth' }
+    },
 })
 
 export default router
