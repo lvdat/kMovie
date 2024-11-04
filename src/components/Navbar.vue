@@ -3,7 +3,9 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top main__navbar"
     >
         <div class="container">
-            <router-link class="navbar-brand" to="/"><b>kMovie</b></router-link>
+            <router-link class="navbar-brand" to="/"
+                ><b><i class="fa-solid fa-film"></i> kMovie</b></router-link
+            >
             <button
                 class="navbar-toggler"
                 type="button"
@@ -22,10 +24,14 @@
                             class="nav-link active"
                             aria-current="page"
                             to="/"
-                            >PHIM MOI</router-link
                         >
+                            <b class="text-warning"
+                                ><i class="fa-solid fa-arrow-trend-up"></i> PHIM
+                                MỚI
+                            </b>
+                        </router-link>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
                             href="#"
@@ -33,30 +39,23 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            THE LOAI
+                            Thể loại
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Phim lẻ</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#"
-                                    >Another action</a
-                                >
+                                <a class="dropdown-item" href="#">Phim bộ</a>
                             </li>
-                            <li><hr class="dropdown-divider" /></li>
                             <li>
-                                <a class="dropdown-item" href="#"
-                                    >Something else here</a
-                                >
+                                <a class="dropdown-item" href="#">Hoạt hình</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">TV Shows</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"
-                            >Disabled</a
-                        >
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex" role="search" @submit.prevent="onSearch">
                     <input

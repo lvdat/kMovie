@@ -22,8 +22,10 @@
                             <thead>
                                 <tr>
                                     <th scope="col">
-                                        <i class="fas fa-circle-plus"></i> Tên
-                                        khác
+                                        <i
+                                            class="fa-solid fa-earth-americas"
+                                        ></i>
+                                        Tên khác
                                     </th>
                                     <th scope="col">
                                         {{ movie.movie.origin_name }}
@@ -33,7 +35,8 @@
                             <tbody>
                                 <tr>
                                     <th scope="row" style="width: 35%">
-                                        Thoi luong
+                                        <i class="fa-solid fa-clock"></i> Thời
+                                        lượng
                                     </th>
                                     <td style="width: 65%">
                                         {{ movie.movie.time }}
@@ -41,7 +44,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row" style="width: 35%">
-                                        Chat luong
+                                        <i class="fa-solid fa-star"></i> Chất
+                                        lượng
                                     </th>
                                     <td style="width: 65%">
                                         {{ movie.movie.lang }} -
@@ -49,7 +53,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" style="width: 35%">Nam</th>
+                                    <th scope="row" style="width: 35%">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        Năm
+                                    </th>
                                     <td style="width: 65%">
                                         {{ movie.movie.year }}
                                     </td>
@@ -66,7 +73,10 @@
         </div>
         <div class="col-md-4">
             <div class="card border-primary" style="border-radius: 0%">
-                <div class="card-header bg-primary text-white">
+                <div
+                    class="card-header bg-primary text-white"
+                    style="border-radius: 0%"
+                >
                     Danh sach tap phim
                 </div>
                 <div class="card-body">
